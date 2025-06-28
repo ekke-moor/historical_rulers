@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #8B4513; /* saddle-brown */
+    --color-primary-foreground: #FEFCF8; /* warm off-white */
+    
+    /* Secondary Colors */
+    --color-secondary: #CD853F; /* sandy-brown */
+    --color-secondary-foreground: #2C1810; /* deep chocolate brown */
+    
+    /* Accent Colors */
+    --color-accent: #DAA520; /* goldenrod */
+    --color-accent-foreground: #2C1810; /* deep chocolate brown */
+    
+    /* Background Colors */
+    --color-background: #FEFCF8; /* warm off-white */
+    --color-surface: #F5F2ED; /* cream */
+    
+    /* Text Colors */
+    --color-text-primary: #2C1810; /* deep chocolate brown */
+    --color-text-secondary: #5D4E37; /* medium brown */
+    
+    /* State Colors */
+    --color-success: #6B8E23; /* olive-green */
+    --color-success-foreground: #FEFCF8; /* warm off-white */
+    --color-warning: #B8860B; /* dark-goldenrod */
+    --color-warning-foreground: #FEFCF8; /* warm off-white */
+    --color-error: #A0522D; /* sienna */
+    --color-error-foreground: #FEFCF8; /* warm off-white */
+    
+    /* Border Colors */
+    --color-border: #E6D7C3; /* muted earth tone */
+    --color-border-light: #F0E6D6; /* lighter earth tone */
+    
+    /* Shadow Colors */
+    --shadow-primary: rgba(139, 69, 19, 0.1); /* warm-toned shadow */
+    --shadow-medium: rgba(139, 69, 19, 0.15); /* medium shadow */
+    --shadow-strong: rgba(139, 69, 19, 0.2); /* strong shadow */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  .font-caption {
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .shadow-subtle {
+    box-shadow: 0 2px 8px var(--shadow-primary);
+  }
+  
+  .shadow-medium {
+    box-shadow: 0 4px 12px var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: 0 8px 16px var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+  
+  .transition-medium {
+    transition: all 300ms ease-out;
+  }
+  
+  .border-earth {
+    border-color: var(--color-border);
+  }
+  
+  .border-earth-light {
+    border-color: var(--color-border-light);
+  }
+}
