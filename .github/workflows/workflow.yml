@@ -1,0 +1,10 @@
+            - name: Configure Kubectl with StrongDM
+  # You may pin to the exact commit or the version.
+  # uses: swdotcom/configure-kubectl-with-strongdm@b89cae76064ac7f9099d952db28e7af2ef1b08a7
+  uses: swdotcom/configure-kubectl-with-strongdm@v1.1.1
+  with:
+    # Token for SDM service account
+    sdm-admin-token: 
+    # Custom SDM CLI download URL. If not provided the default will be used
+    sdm-download-url: # optional, default is https://app.strongdm.com/releases/cli/linux
+          
